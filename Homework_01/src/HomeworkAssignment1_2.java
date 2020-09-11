@@ -5,30 +5,8 @@ import java.util.Stack;
 public class HomeworkAssignment1_2 {
 
 	public static void main(String[] args) {
-		TestMin();
+		
 	}
-
-	public static void TestMin() {
-		MinStack myStack = new MinStack();
-		int min;
-		int top;
-		int popped;
-		int[] intArray = { 0, -2, -5, -3, -5, -1, -8, -6, -4 };
-		for (int i = 0; i < intArray.length; i++) {
-			myStack.push(intArray[i]);
-			min = myStack.getMin();
-			top = myStack.top();
-			System.out.println("Top value: " + top + " | Max value: " + min);
-		}
-		for (int i = 0; i < intArray.length; i++) {
-			popped = myStack.top();
-			myStack.pop();
-			min = myStack.getMin();
-			top = myStack.top();
-			System.out.println("Top value: " + top + " | Max value: " + min + " Popped value: " + popped);
-		}
-	}
-
 }
 
 /*

@@ -5,30 +5,8 @@ import java.util.Stack;
 public class HomeworkAssignment1_1 {
 
 	public static void main(String[] args) {
-		TestMax();
-	}
 	
-	public static void TestMax() {
-		MaxStack myStack = new MaxStack();
-		int max;
-		int top;
-		int popped;
-		int[] intArray = { 0, 2, 5, 3, 5, 1, 8, 6, 4 };
-		for (int i = 0; i < intArray.length; i++) {
-			myStack.push(intArray[i]);
-			max = myStack.getMax();
-			top = myStack.top();
-			System.out.println("Top value: " + top + " | Max value: " + max);
-		}
-		for (int i = 0; i < intArray.length; i++) {
-			popped = myStack.top();
-			myStack.pop();
-			max = myStack.getMax();
-			top = myStack.top();
-			System.out.println("Top value: " + top + " | Max value: " + max + " Popped value: " + popped);
-		}
 	}
-
 }
 
 /*
