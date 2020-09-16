@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Homework_01/src"/>
+	<classpathentry kind="src" path="Homework_02/src"/>
+	<classpathentry kind="src" path="LinkedList/src"/>
+	<classpathentry kind="output" path="Homework_01/bin"/>
+</classpath>
