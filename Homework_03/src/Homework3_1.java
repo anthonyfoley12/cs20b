@@ -37,7 +37,7 @@ class Node {
 }
 /*
  * The Solution class implements the following: 
- * mixList(head) -- homogenize singly linked list of head Node.
+ * mixList(head) -- homogenize singly linked list of Node head.
  * 
  * Un-Homogenized List: L1 -> L2 -> L3 -> ... -> L(n-2) -> L(n-1) -> L(n)
  * Homogenized List: L1 -> L(n) -> L2 -> L(n-1) -> L3 -> L(n-2) -> ...
@@ -47,13 +47,14 @@ class Solution {
 	public void mixList(Node head) { 
 		while(head.next != null && head.next.next != null) {
 			Node current = head;
+			// Go to second last node
 			while(current.next.next != null) {
 				current = current.next;
 			}
 			Node new_end = current;
-			current.next.next = head.next;
-			head.next = current.next;
-			new_end.next = null;
+			current.next.next = head.next; // point last node to current third node - last becomes new second
+			head.next = current.next;      // point head node to new second node
+			new_end.next = null;           // make new end node - otherwise loop in linked list
 			head = head.next.next;
 		}
 	}
