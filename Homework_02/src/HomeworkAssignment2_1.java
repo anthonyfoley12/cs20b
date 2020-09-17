@@ -9,7 +9,7 @@ public class HomeworkAssignment2_1 {
 
 	public static void main(String[] args) {
 		int[] inputs = {5, 1, 2, 3, 4};
-		int[] outputs = {2, 5, 3, 1, 4};
+		int[] outputs = {2, 1, 3, 5, 4};
 		Solution sol = new Solution();
 		System.out.println(sol.isSameEventSequence(inputs,  outputs));
 	}
@@ -17,17 +17,10 @@ public class HomeworkAssignment2_1 {
 }
 
 /*
-* The isSameEventSequence method of the Solution class takes 
-* two integer array args., determines if the event sequences
-* represent a valid set of user events, and returns a boolean 
-* of the result.
-* 
-* Logic:
-* Iterate through events_pushed and push data onto temp stack.
-* 	While top of temp stack == current events_popped value, 
-* 	pop temp stack.
-* If temp stack is empty, input and output events are valid.
-* 
+* The Solution class implements the following features:
+* isSameEventSequence(int[] events_pushed, int[] events_popped)
+*     compare two event sequences (events_pushed, events_popped),
+*     return boolean of sequence validity.
 */
 class Solution {
 	// Tracking Input Stack
