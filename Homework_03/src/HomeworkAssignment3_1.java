@@ -3,7 +3,7 @@
 // Assignment: Homework 3 Problem 1
 // Date: 16 September 2020
 
-public class Homework3_1 {
+public class HomeworkAssignment3_1 {
 
 	public static void main(String[] args) {
 		Node node = new Node(1);
@@ -12,11 +12,23 @@ public class Homework3_1 {
 			current.next = new Node(i);
 			current = current.next;
 		}
+		
+		Node node2 = new Node(20);
+		Node current2 = node2;
+		for(int i = 19; i > 0; i--) {
+			current2.next = new Node(i);
+			current2 = current2.next;
+		}
 
-		printList(node);
+		
 		Solution sol = new Solution();
+		printList(node);
 		sol.mixList(node);
 		printList(node);
+		
+		printList(node2);
+		sol.mixList(node2);
+		printList(node2);
 	}
 	
 	public static void printList(Node head) {
