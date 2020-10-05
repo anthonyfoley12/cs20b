@@ -8,8 +8,8 @@ import java.util.Stack;
 public class HomeworkAssignment2_1 {
 
 	public static void main(String[] args) {
-		int[] inputs = {5, 1, 2, 3, 4};
-		int[] outputs = {2, 1, 3, 5, 4};
+		int[] inputs = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+		int[] outputs = {3, 2, 1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 14};
 		Solution sol = new Solution();
 		System.out.println(sol.isSameEventSequence(inputs,  outputs));
 	}
@@ -23,14 +23,8 @@ public class HomeworkAssignment2_1 {
 *     return boolean of sequence validity.
 */
 class Solution {
-	// Tracking Input Stack
-	private Stack<Integer> temp;
-	
-	public Solution() {
-		this.temp = new Stack<Integer>();
-	}
-	
 	public boolean isSameEventSequence(int[] events_pushed, int[] events_popped) {
+		Stack<Integer> temp = new Stack<Integer>();
 		int popped_index = 0;
 		for(int i = 0; i < events_pushed.length; i++) {
 			temp.push(events_pushed[i]);
