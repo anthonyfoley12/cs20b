@@ -10,27 +10,29 @@ public class HomeworkAssignment4_1 {
 	public static void main(String[] args) {
 		// just like any problems, whatever you need here, etc. For example:
 		Solution sol = new Solution();
-		System.out.println(sol.postfix("4 55 + 62 23 - *"));
-
+		System.out.println(sol.postfix("4   55 +  62 23  -      *"));  // 2301
+		System.out.println(sol.postfix("1 2 3 * + 4 +"));  // 11
+		System.out.println(sol.postfix("8 5 * 7 4 2 + * +"));  // 82
 	}
 }
 
 /*
  * The Solution class implements the following: 
- * postfix(equation) -- returns postfix evaluation of passed equation
+ * postfix(equation) -- returns postfix evaluation string equation
  * 
- * Operands are pushed onto local stack. When 
+ * 
  */
 
 class Solution {
 	public int postfix(String equation) { 
-		String delims = "[ ]+";
+		String delims = "[ ]+"; // regex to find space character(s)
 		String[] items = equation.split(delims);
 		Stack <Integer> operands = new Stack<Integer>();
 		int operand1;
 		int operand2;
 		
 		for (String item : items) {
+			// regex to find operators (+ - * / %)
 			if (item.matches("[+-/%\\*]")) {
 				operand2 = operands.pop();
 				operand1 = operands.pop();
