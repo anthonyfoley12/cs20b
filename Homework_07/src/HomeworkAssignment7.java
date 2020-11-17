@@ -53,8 +53,7 @@ class MyIterator implements Iterator<Integer> {
 	// Returns the next element in the iteration WITHOUT 
 	// advancing the iterator.
 	public Integer lookAhead() {
-		if (hasNext()) return cur;
-		return null;
+		return (hasNext() ? cur : null);
 	}
 
 	@Override
