@@ -8,16 +8,18 @@ import java.util.*;
 public class HomeworkAssignment10_1 {
 
 	public static void main(String[] args) {
-//		ArrayList<Integer> list = new ArrayList<>(Arrays.asList(5,4,3,2,1));
-//		System.out.println(list);
-//		Solution<Integer> sol = new Solution<Integer>(list);
-//		System.out.println(sol.print());
+		ArrayList<Integer> list = new ArrayList<>(Arrays.asList(5));
+		System.out.println(list);
+		Solution<Integer> sol = new Solution<Integer>(list);
+		System.out.println(sol.print());
+		System.out.println(sol.dequeue());
 //		sol.enqueue(6);
 //		System.out.println(sol.print());
 //		sol.dequeue();
 //		System.out.println(sol.print());
 //		sol.enqueue(5);
 //		System.out.println(sol.print());
+
 	}
 
 }
@@ -79,7 +81,7 @@ class Solution<T> {
 	// reheapUp(x) - move the lowest priority element up
 	//               the tree to reestablish the max heap
 	//               property.
-	public void reheapUp(int x) {
+	private void reheapUp(int x) {
 		int idx = get_last_idx();
 		while (has_parent(idx) && parent_is_smaller(idx)) {
 			//System.out.println("SWAP");
@@ -91,7 +93,7 @@ class Solution<T> {
 	// reheapDown(x) - move the highest priority element down
 	//                 the tree to reestablish the max heap
 	//                 property.
-	public void reheapDown(int x) {
+	private void reheapDown(int x) {
 		int idx = 0;
 		while (has_left(idx)) {
 			int larger_child_idx = get_larger_child(idx);
